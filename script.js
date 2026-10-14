@@ -138,20 +138,3 @@ const revealer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 revealTargets.forEach((el) => { el.classList.add('reveal'); revealer.observe(el); });
-
-// ---------- Analytics events (GA4) ----------
-// Shows up in GA4 under Reports → Engagement → Events.
-const track = (name, params = {}) => window.gtag && gtag('event', name, params);
-
-document.querySelectorAll('[data-track]').forEach((el) => {
-  el.addEventListener('click', () => track('cta_click', { cta: el.dataset.track, link_url: el.href }));
-});
-tabs.forEach((tab) => tab.addEventListener('click', () => track('terrain_tab', { terrain: tab.dataset.tab })));
-shots.forEach((shot) => shot.addEventListener('click', () => track('photo_open', { photo: shot.dataset.full })));
-document.querySelectorAll('.faq details').forEach((d) => {
-  d.addEventListener('toggle', () => { if (d.open) track('faq_open', { question: d.querySelector('summary').textContent }); });
-});
-let calcTracked = false;
-document.querySelectorAll('[data-load], #ac, #drive').forEach((el) => el.addEventListener('change', () => {
-  if (!calcTracked) { calcTracked = true; track('calculator_used'); }
-}));

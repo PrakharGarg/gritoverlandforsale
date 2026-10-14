@@ -81,21 +81,6 @@
   }
   </script>
 
-  <!-- Google Analytics 4: replace G-XXXXXXXXXX with your Measurement ID. Nothing loads until you do. -->
-  <script>
-    window.GA_ID = 'G-XXXXXXXXXX';
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    if (!/X{5}/.test(window.GA_ID)) {
-      const s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_ID;
-      document.head.appendChild(s);
-      gtag('js', new Date());
-      gtag('config', window.GA_ID);
-    }
-  </script>
-
   <link rel="preload" as="image" href="images/sunset-ridge.jpg" imagesrcset="images/sunset-ridge-1000.jpg 1000w, images/sunset-ridge.jpg 2000w" imagesizes="100vw" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,7 +117,7 @@
       <a href="#logbook">Logbook</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn--small" href="#buy" data-track="nav_cta">Make it yours</a>
+    <a class="btn btn--small" href="#buy">Make it yours</a>
   </header>
 
   <!-- HERO -->
@@ -143,7 +128,7 @@
       <h1><span class="eyebrow">2022 Grit Overland GO A/T for sale · Ford Transit AWD · High Roof 148″</span>Go&nbsp;anywhere.<br><em>Seriously.</em></h1>
       <p class="hero__sub">Snowed-in ski lots, desert playas, mossy forest roads and sunsets over the lake. This van has done it all, and it's ready for its next driver.</p>
       <div class="hero__ctas">
-        <a class="btn" href="#buy" data-track="hero_cta">See price &amp; details</a>
+        <a class="btn" href="#buy">See price &amp; details</a>
         <a class="btn btn--ghost" href="#logbook">Flip through the logbook</a>
       </div>
     </div>
@@ -520,9 +505,9 @@
         </dl>
       </div>
       <div class="ticket__stub">
-        <a class="btn" href="https://www.rvtrader.com/listing/2022-Grit+Overland-Go+A%2FT+All+Terrain-5041791426" data-track="rvtrader" target="_blank" rel="noopener">View on RV Trader ↗</a>
-        <a class="btn btn--ghost-light" href="https://www.poulsborv.com/rvs/2022-grit-overland-go-a-t-all-terrain-class-b-for-sale-stock-ccx5588/" data-track="dealer" target="_blank" rel="noopener">Dealer listing ↗</a>
-        <a class="btn btn--ghost-light" href="https://www.google.com/maps/search/?api=1&query=Poulsbo+RV+12218+Highway+99+S+Everett+WA" data-track="directions" target="_blank" rel="noopener">Directions ↗</a>
+        <a class="btn" href="/go/rvtrader/" target="_blank" rel="noopener">View on RV Trader ↗</a>
+        <a class="btn btn--ghost-light" href="/go/dealer/" target="_blank" rel="noopener">Dealer listing ↗</a>
+        <a class="btn btn--ghost-light" href="/go/directions/" target="_blank" rel="noopener">Directions ↗</a>
         <p class="fine">Price and availability are set by the dealer and may change. Confirm all details with Poulsbo RV before you buy.</p>
       </div>
     </div>
